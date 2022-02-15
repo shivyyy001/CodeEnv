@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&family=Concert+One&family=Architects+Daughter&family=Special+Elite&display=swap');
+
+.wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+        url('https://i.imgur.com/g63vXfd.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    overflow-x: hidden;
+    height:100vh;
+}
+
+.contact-us {
+    margin-top: 70px;
+}
+
+.row.contact-row {
+    margin: 25px 15px 25px 15px;
+}
+
+.contact-title{
+    font-family: 'Concert One', cursive;
+    font-size: 2.5em;
+}
+
+.info-contact{
+    font-family: 'Special Elite', cursive;
+}
+.contact-us .contact-title,
+.info-contact {
+    color: #fff;
+}
+
+.info-div {
+    margin-top: 14px !important;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.info-head {
+    color: #7b1fa2;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 0.12rem;
+}
+
+img[alt='address'],
+img[alt='phone'] {
+    height: 65px;
+    width: 65px;
+}
+
+img[alt='mail'] {
+    height: 67px;
+    width: 67px;
+}
+
+img[alt="send-icon"]
+{
+    height: 30px;
+    width: 30px;
+}
+
+.send-title{
+    padding-right: 8px;
+    font-family: 'Architects Daughter', cursive;
+    letter-spacing: 0.11rem;
+    font-weight: 600;
+
+}
+
+.btn-send{
+    background: linear-gradient(to left, white 50%, #7b1fa2 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    color:#7b1fa2;
+    border: 1px solid #7b1fa2;
+}
+.btn-send:hover{
+    background-position: left;
+    color:white;
+}
+
+.forms{
+    background-color: white;
+}
+/* .icons {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.icons i {
+    font-size: 20px;
+}
+
+.forms {
+    padding: 20px;
+}
+
+.inputs .contact-inp {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #eee;
+}
+
+.inputs .contact-inp:focus {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #7b1fa2;
+    box-shadow: none;
+}
+
+.inputs textarea {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #eee;
+    width: 100%;
+    resize: none;
+}
+
+.inputs textarea:focus {
+    margin-bottom: 13px;
+    border: none;
+    border-bottom: 2px solid #7b1fa2;
+    box-shadow: none;
+    resize: none;
+}
+
+.form-control {
+    padding: 0.375rem 0.25rem;
+}
+
+
+@media screen and (max-width: 766px) {
+    .icons-div{
+        padding-bottom: 30px;
+    }
+}

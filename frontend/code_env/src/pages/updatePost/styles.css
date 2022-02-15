@@ -1,0 +1,54 @@
+#update-container {
+    padding: 0px 40px;
+}
+
+img[alt="updatebanner"] {
+    width: 100%;
+    border-radius: 5px;
+    margin-top:50px;
+}
+
+#update-form{
+    padding: 20px 10px 0px 10px;
+    margin: 10px;
+    margin-top:20px;
+}
+
+#u_title {
+    width: 100%;
+    margin-right: 15px;
+}
+
+#add-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#u_textarea {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.btn.btn-primary {
+    letter-spacing: 0.1em;
+    font-weight: 450;
+    text-transform: uppercase;
+}
+
+.btn.btn-primary:hover {
+    color: rgb(17, 243, 17);
+}
+
+@media screen and (max-width: 768px) {
+    #update-container {
+        padding: 0px;
+    }
+    img[alt="updatebanner"] {
+        border-radius: 0px;
+    }
+    #update-form{
+        margin: 0px 15px 0px 15px;
+    }
+}

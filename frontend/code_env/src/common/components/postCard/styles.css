@@ -1,0 +1,71 @@
+/* .card{
+    height:100px;
+    margin:10px;
+    border-radius: 10px;
+} */
+
+.card-header1,.card-header2{
+    padding:0px;
+    margin-bottom: 2px;
+}
+
+.card-img-top{
+    height:165px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.card-title{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card.flip-card {
+    background-color: transparent;
+    height:220px;
+    margin:10px;
+    border:none;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .card.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .card-body.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .card-body.flip-card-back {
+    background: linear-gradient(to bottom, #5252fd 0%, #c522fc 100%);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .text-muted{
+    padding:0px;
+    margin-top: 60px;
+  }

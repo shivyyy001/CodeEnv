@@ -1,0 +1,44 @@
+.nav-title {
+    font-family: 'Pacifico', cursive;
+    font-weight: 540;
+    display: flex;
+}
+
+.project-icon-div {
+    padding-right: 3px;
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav {
+    font-family: 'Handlee', cursive;
+}
+
+img[alt='logout-img'] {
+    height: 21px;
+    width: 23px;
+}
+
+img[alt='profile-img'] {
+    height: 30px;
+    width: 30px;
+}
+
+img[alt='project-icon'] {
+    height: 25px;
+    width: 25px;
+}
+
+img[alt='dictionary-img'] {
+    height: 21px;
+    width: 23px;
+}
+
+.profile-text{
+    font-family: 'Pacifico', cursive;
+    font-weight: 540;
+    color:black;
+}
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(168, 4, 168);
+}
