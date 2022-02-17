@@ -2,13 +2,15 @@ import Button from '../../common/components/button';
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Header from '../../common/components/header';
-import blog from '../../constants/blog.jpeg';
+import blog from '../../assets/blog.jpeg';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
 import { notifyMe } from '../../common/components/notification';
 
 function CreatePost() {
+
+    //Initial values for post.
     const initialValues = {
         title: '',
         description: '',
@@ -25,6 +27,7 @@ function CreatePost() {
     const imgURL = post.image ? post.image : blog;
     const history = useHistory();
 
+    //Function to change the image.
     const uploadImage = async (fileData) => {
         try {
             const ans = await axios.post(
@@ -63,6 +66,7 @@ function CreatePost() {
         history.push('/home');
     };
 
+    //Function to create the post.
     const createPost = (e) => {
         e.preventDefault();
         fetch('http://localhost:3002/home/create', {

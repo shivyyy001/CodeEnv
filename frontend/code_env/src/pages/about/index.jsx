@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../common/components/header';
 import './styles.css';
-import mypic from '../../constants/my_pic.jpg';
+import mypic from '../../assets/my_pic.jpg';
 
 const About = () => {
     return (

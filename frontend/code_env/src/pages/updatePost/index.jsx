@@ -2,7 +2,7 @@ import Button from '../../common/components/button';
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 import Header from '../../common/components/header';
-import blog from '../../constants/blog.jpeg';
+import blog from '../../assets/blog.jpeg';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { notifyMe } from '../../common/components/notification';
@@ -11,12 +11,13 @@ import { Toaster } from 'react-hot-toast';
 function UpdatePost({ match }) {
     const history = useHistory();
 
+    //Initial object for post.
     const initialValues = {
         title: '',
         description: '',
         image: '',
-        username: 'shivyyy_21',
-        categories: 'All',
+        username: '',
+        categories: '',
         createdDate: new Date(),
     };
 
@@ -30,6 +31,7 @@ function UpdatePost({ match }) {
         setPost({ ...post, [e.target.name]: e.target.value });
     };
 
+    //Function to get the post.
     const getPost = (id) => {
         fetch(`http://localhost:3002/home/post/${id}`)
             .then((response) => {
@@ -49,6 +51,7 @@ function UpdatePost({ match }) {
         history.push(`/details/${match.params.id}`);
     };
 
+    //Function to update the post data.
     const updatePost = (e) => {
         e.preventDefault();
         fetch(`http://localhost:3002/home/edit/${match.params.id}`, {
@@ -78,6 +81,7 @@ function UpdatePost({ match }) {
         getPost(match.params.id);
     }, []);
 
+    //Function to update the image.
     const uploadImage = async (fileData) => {
         console.log(fileData);
         try {

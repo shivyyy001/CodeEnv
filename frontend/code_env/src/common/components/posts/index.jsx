@@ -4,10 +4,12 @@ import PostCard from '../postCard';
 import { Link, useLocation } from 'react-router-dom';
 
 function Posts() {
+
+    //Extracting the search query from useLocation Hook.
     const { search } = useLocation();
     const [posts, setPosts] = useState([]);
-    // let posts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+    //Function to get all posts to show on home page based on queries (either username or category or both).
     const getAllPosts = () => {
         fetch(`http://localhost:3002/home/posts/${search}`)
             .then((response) => {

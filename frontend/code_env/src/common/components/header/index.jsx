@@ -1,10 +1,12 @@
 import React from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
-import layers from './../../../constants/layers.png';
+import layers from './../../../assets/layers.png';
 import { useSelector } from 'react-redux';
 
 export default function Header() {
+
+    //Getting userdetails and checking if user is authenicated or not using redux.
     const userDetails = useSelector((state) => state.userReducer.userDetails);
     const isAuthenticated =
         useSelector((state) => state.userReducer.isAuthenticated) ||

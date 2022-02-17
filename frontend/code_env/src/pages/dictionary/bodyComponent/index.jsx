@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import './styles.css';
-import categories from '../../../constants/langcategories.jsx';
+import categories from '../../../assets/langcategories.jsx';
 import Button from '../../../common/components/button';
 
 const Body = ({

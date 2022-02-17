@@ -7,6 +7,8 @@ import { notifyMe } from '../../common/components/notification';
 import { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
+
+    //Initial details of user.
     const detailsTemplate = {
         name: '',
         email: '',
@@ -23,6 +25,7 @@ const Contact = () => {
         history.push('/home');
     };
 
+    //Function to post the message.
     const postContact = (e) => {
         e.preventDefault();
 

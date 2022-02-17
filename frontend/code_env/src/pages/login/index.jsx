@@ -24,6 +24,7 @@ function Login() {
         history.push('/home');
     };
 
+    //Function to login user and get token.
     const loginUser = (e) => {
         e.preventDefault();
         fetch('http://localhost:3002/user/login', {
@@ -42,13 +43,13 @@ function Login() {
                     localStorage.setItem('isAuthenticated', true);
                     dispatch(setUserAuthenticatedRedux(true));
                     getUser(data.authtoken);
-                }
-                else{
-                    notifyMe('error',data.errors[0].msg);
+                } else {
+                    notifyMe('error', data.errors[0].msg);
                 }
             });
     };
 
+    //Function to pass token to backend to fetch user details.
     const getUser = async (authtoken) => {
         fetch('http://localhost:3002/user/getuser', {
             method: 'POST',
@@ -76,7 +77,6 @@ function Login() {
     return (
         <section className="vh-100 v-login">
             <div className="container">
-                {/* <div className="container1"> */}
                 <div className="row container1">
                     <div className="col-md-7 first-col">
                         <div className="typewriter">
@@ -187,7 +187,6 @@ function Login() {
                         </div>
                     </div>
                 </div>
-                {/* </div> */}
             </div>
             <Toaster />
         </section>

@@ -1,9 +1,11 @@
 import React from 'react';
 import Button from '../button';
 import './styles.css';
-import { categories } from '../../../constants/categories';
+import { categories } from '../../../assets/categories';
 import { Link, useLocation } from 'react-router-dom';
 function Categories() {
+
+    //using useLocation hook to get the username from query params if there.
     const search = useLocation().search;
     const queryusername = new URLSearchParams(search).get('username');
 

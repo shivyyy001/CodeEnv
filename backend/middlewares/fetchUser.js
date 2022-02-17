@@ -2,8 +2,8 @@ import jwt from "jsonwebtoken";
 const JWT_SECRET = "CodeEnvJWT";
 
 export const fetchuser = (request, response, next) => {
+  
   // get user from the jwt token and add id to request object
-
   const token = request.header("auth-token");
   if (!token) {
     response

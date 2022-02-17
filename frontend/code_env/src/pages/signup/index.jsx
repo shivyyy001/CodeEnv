@@ -19,6 +19,7 @@ function Signup() {
         history.push('/');
     };
 
+    //Function to create user.
     const createUser = (e) => {
         e.preventDefault();
         fetch('http://localhost:3002/user/create', {

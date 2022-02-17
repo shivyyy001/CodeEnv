@@ -17,6 +17,7 @@ function DetailedView({ match }) {
         ? post.image
         : 'https://movingimage.my/wp-content/uploads/2019/01/contentw.jpeg';
 
+    //Function to get the post.
     const getPost = (id) => {
         fetch(`http://localhost:3002/home/post/${id}`)
             .then((response) => {
@@ -33,6 +34,7 @@ function DetailedView({ match }) {
             });
     };
 
+    //Function to delete the post only if author is the logged in user.
     const deletePost = () => {
         fetch(`http://localhost:3002/home/delete/${match.params.id}`, {
             method: 'DELETE',

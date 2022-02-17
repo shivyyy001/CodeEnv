@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles.css';
 
 function PostCard({ post }) {
 
+    //Function to check Limit of text inside card.
     const shortify = (data, limit) => {
-        if(data.length>limit)return data.substr(0,limit) + "...";
+        if (data.length > limit) return data.substr(0, limit) + '...';
         else return data;
     };
 
@@ -21,18 +22,22 @@ function PostCard({ post }) {
                             className="card-img-top"
                             alt="..."
                         />
-                        <h5 className="card-title">{shortify(post.title,10)}</h5>
+                        <h5 className="card-title">
+                            {shortify(post.title, 10)}
+                        </h5>
                     </div>
                     <div className="card-body flip-card-back">
                         <p className="card-header1">
                             <b>Author : </b>
-                            {shortify(post.username,15)}
+                            {shortify(post.username, 15)}
                         </p>
                         <p className="card-header2">
                             <b>Category : </b>
                             {post.categories}
                         </p>
-                        <p className="card-text">{shortify(post.description,80)}</p>
+                        <p className="card-text">
+                            {shortify(post.description, 50)}
+                        </p>
                     </div>
                 </div>
             </div>

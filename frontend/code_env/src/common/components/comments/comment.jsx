@@ -2,10 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Comment = ({ item, isDeleted, setIsDeleted }) => {
+    //Getting data of logged in user to check if he can delete comment of not.
     const loggedinUser = useSelector(
         (state) => state.userReducer.userDetails
     ).username;
 
+    //Function to remove comment.
     const removeComment = () => {
         fetch(`http://localhost:3002/comment/delete/${item._id}`, {
             method: 'DELETE',

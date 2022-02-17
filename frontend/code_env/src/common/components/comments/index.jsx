@@ -4,6 +4,8 @@ import Button from '../button';
 import Comment from './comment';
 
 const Comments = ({ post }) => {
+
+    //Initial values for comment.
     const initialValues = {
         username: '',
         postId: '',
@@ -24,6 +26,7 @@ const Comments = ({ post }) => {
         });
     };
 
+    //Function to post comments.
     const postComment = () => {
         fetch('http://localhost:3002/comment/post', {
             method: 'POST',
@@ -47,6 +50,7 @@ const Comments = ({ post }) => {
             });
     };
 
+    //Function to get comments.
     const getComments = () => {
         fetch(`http://localhost:3002/comment/get/${post._id}`)
             .then((response) => {

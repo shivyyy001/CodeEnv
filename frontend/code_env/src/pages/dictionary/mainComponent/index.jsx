@@ -10,6 +10,7 @@ function MainComponent() {
     const [category, setCategory] = useState('en');
     const [dataisset, setDataisset] = useState(false);
 
+    //Function to get word from dictionary.
     const getData = () => {
         if (word !== '') {
             const url = `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`;
@@ -17,17 +18,14 @@ function MainComponent() {
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
-                        //console.log(response);
                         return response.json();
                     } else {
                         console.log('Error fetching');
                     }
                 })
                 .then((data) => {
-                    //console.log(data);
                     setData(data);
                     setDataisset(true);
-                    //console.log(data[0].phonetics[0].audio);
                 });
         }
     };
