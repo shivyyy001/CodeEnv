@@ -3,6 +3,7 @@ export const categories = [
     'CompetitiveVsDSA',
     'OS',
     'DBMS',
+    'DSU',
     'LinkedList',
     'Tree',
     'HashMaps',

@@ -2,28 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
-.toast{
+.toast {
     background-color: #00ff99 !important;
 }
 
-img[alt="user-img"]
-{
+img[alt='user-img'] {
     height: 100px;
     width: 100px;
     margin-top: 0px;
-    
 }
 
-.sign-img ,.sign-text{
+.sign-img,
+.sign-text {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.v-login{
+.v-login {
     background-color: rgb(0, 0, 0);
-    /* height: 100%; */
-    padding:21px;
+    min-height: 100vh;
+    padding: 19px;
 }
 
 .row.container1 {
@@ -278,7 +277,7 @@ label {
 
 @media all and (max-width: 600px) {
     .sign-text {
-        font-size: 30px;
+        font-size: 15px;
     }
     .typewriter h1 {
         font-size: 35px;
@@ -287,7 +286,7 @@ label {
 
 @media all and (max-width: 400px) {
     .sign-text {
-        font-size: 25px;
+        font-size: 15px;
     }
 }
 

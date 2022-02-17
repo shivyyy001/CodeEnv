@@ -1,8 +1,6 @@
-/* .card{
-    height:100px;
-    margin:10px;
-    border-radius: 10px;
-} */
+.card{
+  font-size: 12px;
+}
 
 .card-header1,.card-header2{
     padding:0px;
@@ -12,14 +10,13 @@
 .card-img-top{
     height:165px;
     border-radius: 10px 10px 0px 0px;
-    object-fit: cover;
 }
 
 .card-title{
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .card.flip-card {

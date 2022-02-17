@@ -4,7 +4,6 @@ import './styles.css';
 import { categories } from '../../../assets/categories';
 import { Link, useLocation } from 'react-router-dom';
 function Categories() {
-
     //using useLocation hook to get the username from query params if there.
     const search = useLocation().search;
     const queryusername = new URLSearchParams(search).get('username');
@@ -65,37 +64,41 @@ function Categories() {
                         if (i != 0)
                             return (
                                 <tr key={i}>
-                                    <ul className="category-list" type="none">
-                                        <Link
-                                            to={
-                                                queryusername
-                                                    ? `/home?username=${queryusername}&categories=${category}`
-                                                    : `/home?categories=${category}`
-                                            }
-                                            className="categorylinks"
-                                        >
-                                            {' '}
-                                            <li className="items">
-                                                {category}
-                                            </li>
-                                        </Link>
-                                    </ul>
+                                    <td>
+                                        <ol className="category-list">
+                                            <Link
+                                                to={
+                                                    queryusername
+                                                        ? `/home?username=${queryusername}&categories=${category}`
+                                                        : `/home?categories=${category}`
+                                                }
+                                                className="categorylinks"
+                                            >
+                                                {' '}
+                                                <li className="items">
+                                                    {category}
+                                                </li>
+                                            </Link>
+                                        </ol>
+                                    </td>
                                 </tr>
                             );
                         else
                             return (
                                 <tr key={i}>
-                                    <ul className="category-list" type="none">
-                                        <Link
-                                            to={`/home`}
-                                            className="categorylinks"
-                                        >
-                                            {' '}
-                                            <li className="items">
-                                                {category}
-                                            </li>
-                                        </Link>
-                                    </ul>
+                                    <td>
+                                        <ol className="category-list">
+                                            <Link
+                                                to={`/home`}
+                                                className="categorylinks"
+                                            >
+                                                {' '}
+                                                <li className="items">
+                                                    {category}
+                                                </li>
+                                            </Link>
+                                        </ol>
+                                    </td>
                                 </tr>
                             );
                     })}

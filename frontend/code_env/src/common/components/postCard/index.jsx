@@ -22,9 +22,9 @@ function PostCard({ post }) {
                             className="card-img-top"
                             alt="..."
                         />
-                        <h5 className="card-title">
-                            {shortify(post.title, 10)}
-                        </h5>
+                        <h6 className="card-title">
+                            {shortify(post.title, 15)}
+                        </h6>
                     </div>
                     <div className="card-body flip-card-back">
                         <p className="card-header1">
@@ -35,8 +35,8 @@ function PostCard({ post }) {
                             <b>Category : </b>
                             {post.categories}
                         </p>
-                        <p className="card-text">
-                            {shortify(post.description, 50)}
+                        <p className="card-text my-1">
+                            {shortify(post.description, 150)}
                         </p>
                     </div>
                 </div>

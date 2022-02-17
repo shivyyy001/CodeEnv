@@ -101,9 +101,10 @@ const Comments = ({ post }) => {
                 comments
                     .slice(0)
                     .reverse()
-                    .map((item) => {
+                    .map((item,i) => {
                         return (
                             <Comment
+                                key={i}
                                 item={item}
                                 isDeleted={donecomment}
                                 setIsDeleted={setDonecomment}

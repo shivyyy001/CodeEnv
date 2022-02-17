@@ -4,7 +4,6 @@ import PostCard from '../postCard';
 import { Link, useLocation } from 'react-router-dom';
 
 function Posts() {
-
     //Extracting the search query from useLocation Hook.
     const { search } = useLocation();
     const [posts, setPosts] = useState([]);
@@ -30,21 +29,26 @@ function Posts() {
     }, [search]);
 
     return posts.length > 0 ? (
-        posts
-            .slice(0)
-            .reverse()
-            .map((post,i) => (
-                <div className="card-container col-md-4 col-sm-6 col-12" key={i}>
-                    <Link
-                        to={`/details/${post._id}`}
-                        className="link-to-detail"
+        // <div className="row">
+            posts
+                .slice(0)
+                .reverse()
+                .map((post, i) => (
+                    <div
+                        className="card-container col-md-4 col-sm-6 col-12"
+                        key={i}
                     >
-                        <PostCard post={post} />
-                    </Link>
-                </div>
-            ))
+                        <Link
+                            to={`/details/${post._id}`}
+                            className="link-to-detail"
+                        >
+                            <PostCard post={post} />
+                        </Link>
+                    </div>
+                ))
+        // </div>
     ) : (
-        <div className='my-3 d-flex justify-content-center'>
+        <div className="my-3 d-flex justify-content-center">
             <h5 className="noposts">No posts yet! Create one....</h5>
         </div>
     );

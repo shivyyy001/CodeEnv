@@ -2,22 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
-img[alt="adduser-img"]
-{
+img[alt='adduser-img'] {
     height: 105px;
     width: 105px;
 }
 
-.signup-img ,.sign-text1{
+.signup-img,
+.sign-text1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.v-signup{
+.v-signup {
     background-color: rgb(0, 0, 0);
-    height: 100%;
-    padding:2px;
+    min-height: 100vh;
+    padding: 2px;
 }
 
 .row.container11 {

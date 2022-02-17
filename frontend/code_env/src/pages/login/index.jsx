@@ -75,7 +75,7 @@ function Login() {
     };
 
     return (
-        <section className="vh-100 v-login">
+        <section className="v-login">
             <div className="container">
                 <div className="row container1">
                     <div className="col-md-7 first-col">
@@ -131,7 +131,7 @@ function Login() {
                             <form onSubmit={loginUser}>
                                 <div className="mb-3">
                                     <label
-                                        for="exampleInputEmail1"
+                                        htmlFor="exampleInputEmail1"
                                         className="form-label"
                                     >
                                         Username
@@ -152,7 +152,7 @@ function Login() {
                                 </div>
                                 <div className="mb-3">
                                     <label
-                                        for="exampleInputPassword1"
+                                        htmlFor="exampleInputPassword1"
                                         className="form-label"
                                     >
                                         Password

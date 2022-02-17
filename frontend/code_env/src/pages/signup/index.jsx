@@ -34,16 +34,16 @@ function Signup() {
             })
             .then((data) => {
                 if (!data.errors) {
-                    notifyMe('success','User created!');
+                    notifyMe('success', 'User created!');
                     setTimeout(redirect, 2500);
                 } else {
-                    notifyMe('error',data.errors[0].msg);
+                    notifyMe('error', data.errors[0].msg);
                 }
             });
     };
 
     return (
-        <section className="vh-100 v-signup">
+        <section className="v-signup">
             <div className="container">
                 <div className="row container11 mt-4">
                     <div className="col-md-7 first-col1">
@@ -99,7 +99,7 @@ function Signup() {
                             <form onSubmit={createUser}>
                                 <div className="mb-3">
                                     <label
-                                        for="exampleInputEmail11"
+                                        htmlFor="exampleInputEmail11"
                                         className="form-label"
                                     >
                                         Username
@@ -120,7 +120,7 @@ function Signup() {
                                 </div>
                                 <div className="mb-3">
                                     <label
-                                        for="exampleInputPassword11"
+                                        htmlFor="exampleInputPassword11"
                                         className="form-label"
                                     >
                                         Password

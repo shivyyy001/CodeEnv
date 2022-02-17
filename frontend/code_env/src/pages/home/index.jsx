@@ -16,7 +16,7 @@ function Home() {
                     <div className="mr-2 col col-md-3 col-sm-4 col-12" id="category">
                         <Categories />
                     </div>
-                    <div className="d-flex flex-wrap col col-md-9 col-sm-8 col-12">
+                    <div className="posts d-flex flex-wrap col col-md-9 col-sm-8 col-12">
                         <Posts />
                     </div>
                 </div>
