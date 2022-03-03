@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const dbConnection = async () => {
   const URL =
-    "mongodb+srv://shivansh:mongo123@codeenv.4fyf5.mongodb.net/CODEENVBLOG?retryWrites=true&w=majority";
+    "mongodb+srv://shivansh:yourpassword@codeenv.4fyf5.mongodb.net/CODEENVBLOG?retryWrites=true&w=majority";
   try {
     await mongoose.connect(URL, {
       useUnifiedTopology: true,
